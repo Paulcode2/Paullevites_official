@@ -3,6 +3,8 @@ import './footer.css'
 import {AiFillFacebook} from 'react-icons/ai'
 import {AiFillTwitterCircle} from 'react-icons/ai'
 import {AiFillInstagram} from 'react-icons/ai'
+import {AiFillLinkedin} from 'react-icons/ai'
+import {AiFillGithub} from 'react-icons/ai'
 
 
 const Footer = () => {
@@ -22,8 +24,8 @@ const Footer = () => {
             <a href="https://facebook.com"><AiFillFacebook/></a>
             <a href="https://twitter.com"><AiFillTwitterCircle/></a>
             <a href="https://instagram.com"><AiFillInstagram/></a>
-            <a href="https://linkedin.com"></a>
-            <a href="https://github.com"></a>
+            <a href="https://linkedin.com"><AiFillLinkedin/></a>
+            <a href="https://github.com"><AiFillGithub/></a>
             </div> 
 
             <div className="footer__copyright">
