@@ -38,7 +38,15 @@ const About = () => {
                     </div>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia velit animi cum voluptates eaque totam vel accusantium, odio itaque sapiente dolorum quam eos natus repellat. Harum quidem exercitationem officia aperiam.
+                    Paul is a Skilled individual, who has vast knowledge and experience in programming.
+<br />
+Started with python, understood its functionality, and built projects with it. <br /> Moved into CMS development using the technology Wordpress, and worked as a web developer with different organizations as a freelancer. <br /> Switched from CMS development to Frontend development, and has built projects and collaborated with skilled developers to work on projects.
+
+<br /> I currently run a blog called ‘Flash Blog’ which was built with pure vanilla HTML/JS framework.
+
+I am also a skilled professional, who pays attention to the tiniest detail and has a high team spirit that motivates team mates.
+
+Currently studying computer science in the University of Benin, Benin city.
                     </p>
 
                     <a href="#contact" className="btn btn-primary">Let's Talk</a>
