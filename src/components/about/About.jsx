@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import Me from '../../assets/167411225_2647810512183903_6258191121428737576_n (1).jpg'
+import Me from '../../assets/WhatsApp Image 2023-01-30 at 20.12.31(1).jpeg'
 import {BiTime} from 'react-icons/bi'
 import {FiUsers} from 'react-icons/fi'
 import {AiFillFolderOpen} from 'react-icons/ai'
