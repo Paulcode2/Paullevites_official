@@ -7,10 +7,13 @@ import Experience from './components/experience/Experience'
 // import Testimonials from './components/testimonials/Testimonial'
 import Contact from './components/contacts/Contact'
 import Footer from './components/footer/Footer'
+import SEO from './components/head/Head'
+
 
 const App = () => {
     return(
        <>
+       <SEO/>
          <Header />
          <Nav />
          <About />
