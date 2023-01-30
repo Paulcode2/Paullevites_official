@@ -38,7 +38,7 @@ const About = () => {
                     </div>
 
                     <p>
-                    Paul is a Skilled individual, who has vast knowledge and experience in programming.
+                    I am a Skilled individual, who has vast knowledge and experience in programming.
 <br />
 Started with python, understood its functionality, and built projects with it. <br /> Moved into CMS development using the technology Wordpress, and worked as a web developer with different organizations as a freelancer. <br /> Switched from CMS development to Frontend development, and has built projects and collaborated with skilled developers to work on projects.
 
