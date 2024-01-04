@@ -60,8 +60,14 @@
 }
 
 .about__card small{
-    font-size: 0.8rem;
     color: var(--color-light);
+    font-size: 0.8rem;
+    
+}
+.about__card small a{
+    /* color: var(--color-light); */
+    font-size: .8rem;
+    font-weight: 600;
 }
 
 .about__content p{

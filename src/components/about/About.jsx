@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import Me from '../../assets/WhatsApp Image 2023-01-30 at 20.12.31(1).jpeg'
+import Me from '../../assets/Main  (1).jpeg'
 import {BiTime} from 'react-icons/bi'
 import {FiUsers} from 'react-icons/fi'
 import {AiFillFolderOpen} from 'react-icons/ai'
@@ -26,27 +26,25 @@ const About = () => {
                             <small>3+ years</small>
                         </article>
                         <article className='about__card'>
-                            <FiUsers className='about__icon'/>
-                            <h5>Customers</h5>
-                            <small>50+ Worldwide</small>
+                            <AiFillFolderOpen className='about__icon'/>
+                            <h5>Github</h5>
+                            <small>
+                                <a href="https://paulcode2.github.io" target='blank'>Click Me</a>
+                            </small>
                         </article>
                         <article className='about__card'>
-                            <AiFillFolderOpen className='about__icon'/>
+                            <FiUsers className='about__icon'/>
                             <h5>Projects</h5>
-                            <small>30+ Projects</small>
+                            <small>
+                                <a href="https://linktr.ee/paullevites">Click Me</a>
+                            </small>
                         </article>
                     </div>
 
                     <p>
-                    I am a Skilled individual, who has vast knowledge and experience in programming.
-<br />
-Started with python, understood its functionality, and built projects with it. <br /> Moved into CMS development using the technology Wordpress, and worked as a web developer with different organizations as a freelancer. <br /> Switched from CMS development to Frontend development, and has built projects and collaborated with skilled developers to work on projects.
-
-<br /> I currently run a blog called ‘Flash Blog’ which was built with pure vanilla HTML/JS framework.
-
-I am also a skilled professional, who pays attention to the tiniest detail and has a high team spirit that motivates team mates.
-
-Currently studying computer science in the University of Benin, Benin city.
+                    Dedicated and detail-oriented Frontend Engineer with over 3 years of experience in Web development, and frontend technologies <br />
+                    With a goal, to solve tech related problems in various institutions of the world. <br />
+                    This zeal to solve problems, has resulted in me working on various projects, as well as consulting for tech startups.
                     </p>
 
                     <a href="#contact" className="btn btn-primary">Let's Talk</a>
