@@ -42,9 +42,9 @@ const About = () => {
                     </div>
 
                     <p>
-                    Dedicated and detail-oriented Frontend Engineer with over 3 years of experience in Web development, and frontend technologies <br />
-                    With a goal, to solve tech related problems in various institutions of the world. <br />
-                    This zeal to solve problems, has resulted in me working on various projects, as well as consulting for tech startups.
+                   I am Dedicated and detail-oriented Frontend Engineer with over 3 years of experience in Web development and frontend technologies,
+                    With a goal to solve tech related problems in various institutions of the world. <br />
+                    My zeal to solve problems, has resulted in me working on various projects, as well as consulting for tech startups and Educational bodies.
                     </p>
 
                     <a href="#contact" className="btn btn-primary">Let's Talk</a>
