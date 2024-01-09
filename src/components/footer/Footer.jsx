@@ -22,7 +22,7 @@ const Footer = () => {
 
            <div className="footer__socials">
             <a href="https://facebook.com/paul.Levite.73/"><AiFillFacebook/></a>
-            <a href="https://twitter.com/levitespaul"><AiFillTwitterCircle/></a>
+            <a href="https://X.com/curlyhair_dev"><AiFillTwitterCircle/></a>
             <a href="https://instagram.com/Paullevites_official/"><AiFillInstagram/></a>
             <a href="https://www.linkedin.com/in/paul-ifeoluwa-levites-4a1530262/"><AiFillLinkedin/></a>
             <a href="https://github.com/Paulcode2"><AiFillGithub/></a>

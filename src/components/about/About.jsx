@@ -29,7 +29,7 @@ const About = () => {
                             <AiFillFolderOpen className='about__icon'/>
                             <h5>Github</h5>
                             <small>
-                                <a href="https://paulcode2.github.io" target='blank'>Click Me</a>
+                                <a href="https://github.com/paulcode2" target='blank'>Click Me</a>
                             </small>
                         </article>
                         <article className='about__card'>
