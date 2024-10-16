@@ -11,7 +11,7 @@ const Port = () => {
                 <article className="portfolio__item">
                 <h3> User Auth</h3>
                         <a href="https://github.com/Paulcode2/User-Authentication" rel="noreferrer" className='btn' target="_blank">Github</a>
-                        <a href="https://user-authentication-nine.vercel.app/" rel="noreferrer"  className='btn btn-primary select'  target="_blank">Live Demo</a>
+                        <a href="https://userp-auth.vercel.app/" rel="noreferrer"  className='btn btn-primary select'  target="_blank">Live Demo</a>
                     <div className="portfolio__item-image">
                         
                     </div>
@@ -19,7 +19,7 @@ const Port = () => {
             <article className="portfolio__item">
             <h3>Kings Chat</h3>
                         <a href="https://github.com/Paulcode2/User-Authentication" rel="noreferrer" className='btn' target="_blank">Github</a>
-                        <a href="https://user-authentication-nine.vercel.app/" rel="noreferrer"  className='btn btn-primary'  target="_blank">Live Demo</a>
+                        <a href="https://kings-chat.vercel.app/login" rel="noreferrer"  className='btn btn-primary'  target="_blank">Live Demo</a>
                 <div className="portfolio__item-image">
                         {/* <img src={Auth} alt="" /> */}
                     </div>
