@@ -23,7 +23,7 @@ const About = () => {
                         <article className='about__card'>
                             <BiTime className='about__icon'/>
                             <h5>Experience</h5>
-                            <small>3+ years</small>
+                            <small>4+ years</small>
                         </article>
                         <article className='about__card'>
                             <AiFillFolderOpen className='about__icon'/>
