@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import Me from '../../assets/Main  (1).jpeg'
+import Me from '../../assets/pic 1.jpg'
 import {BiTime} from 'react-icons/bi'
 import {FiUsers} from 'react-icons/fi'
 import {AiFillFolderOpen} from 'react-icons/ai'
@@ -42,7 +42,7 @@ const About = () => {
                     </div>
 
                     <p>
-                   I am Dedicated and detail-oriented Frontend Engineer with years of experience in Web development and frontend technologies,
+                   I am a Dedicated and detail-oriented Frontend Engineer with years of experience in Web development and frontend technologies,
                     With a goal to solve tech related problems in various institutions of the world. <br />
                     My zeal to solve problems, has resulted in me working on various projects, as well as consulting for tech startups and Educational bodies.
                     </p>
