@@ -1,0 +1,45 @@
+/* #portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.portfolio__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    /* align-items: center; */
+}
+
+.portfolio__item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.span{
+    text-align: right;
+    position: relative;
+    right: 3rem;
+    top: 2rem;
+    font-size: .8rem;
+    color: grey;
+}
+.span{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px){
+    .portfolio__container{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;        
+        align-items: center;
+    }
+    .portfolio__item h3{
+        font-size: 1rem;
+    }
+    .portfolio__item .btn {
+        padding: .5rem;
+    }
+
+}
