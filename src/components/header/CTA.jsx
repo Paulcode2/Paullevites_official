@@ -1,5 +1,5 @@
 import React from 'react'
-import Cv from '../../assets/My Cv (3).jpeg'
+import Cv from '../../assets/Image to PDF 20241012 12.06.39.pdf'
 const CTA = () => {
     return(
         <div className='cta'>
