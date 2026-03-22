@@ -1,33 +1,216 @@
-nav{
-    background: rgba(0, 0, 0, 0.3);
-    width: max-content;
-    display: block;
-    padding: 0.7rem 1.7rem;
-    z-index: 2;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.nav.scrolled {
+  background: rgba(15, 15, 26, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  padding: 0.75rem 0;
+}
+
+.nav__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo a {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-decoration: none;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.nav__logo a:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+}
+
+.nav__links {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__links li {
+  position: relative;
+}
+
+.nav__links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav__links a .nav__icon {
+  font-size: 1.2rem;
+  display: none;
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: var(--color-primary);
+  background: rgba(0, 217, 255, 0.1);
+}
+
+.nav__links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* Mobile menu toggle */
+.nav__menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 5px;
+}
+
+.menu-bar {
+  width: 25px;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .nav__container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 0.75rem 0;
+  }
+
+  .nav.scrolled {
+    padding: 0.5rem 0;
+  }
+
+  .nav__menu-toggle {
+    display: flex;
+  }
+
+  .nav__links {
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 2rem;
-    display: flex;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--color-bg-dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(15px);
-}
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
 
-nav a{
+  .nav.menu-open .nav__links {
+    right: 0;
+  }
+
+  .nav__links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav__links a {
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .nav__links a .nav__icon {
+    display: none;
+  }
+
+  .nav__links a .nav__label {
+    display: inline;
+  }
+
+  .nav__links a:hover,
+  .nav__links a.active {
     background: transparent;
-    padding: 1rem;
-    border-radius: 50%;
-    display: flex;
-    color: var(--color-light);
+  }
+
+  .nav__links a.active::after {
+    display: none;
+  }
+
+  .nav__logo a {
     font-size: 1.5rem;
+  }
 }
 
-nav a:hover{
-    background: rgba(0, 0, 0, 0.4);
-}
+/* Small mobile */
+@media screen and (max-width: 400px) {
+  .nav__container {
+    padding: 0 1rem;
+  }
 
-nav a.active{
-    background: var(--color-primary);
-    color: var(--color-bg);
+  .nav__logo a {
+    font-size: 1.35rem;
+  }
+
+  .nav__links {
+    max-width: 100%;
+  }
 }

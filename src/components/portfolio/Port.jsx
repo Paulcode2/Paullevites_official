@@ -1,52 +1,82 @@
-import React from 'react'
-import './port.css'
-// import Auth from '../../assets/User Auth.PNG'
+import React from "react";
+import "./port.css";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
+// Using placeholder images - replace with actual project screenshots
+import project1Img from "../../assets/TFAWE.jpg";
+import project2Img from "../../assets/Wholistic3.png";
+
 const Port = () => {
-    return(
-        <section id='portfolio'>
-            <h5>My works</h5>
-            <h2>Portfolio</h2>
+  const projects = [
+    {
+      title: "TFAWE",
+      // description:
+      //   "A stunning e-commerce platform for a Canadian-based fashion brand.",
+      image: project1Img,
+      demo: "https://tfawecustom.com/",
+      // github: "https://github.com/Paulcode2/User-Authentication",
+    },
+    {
+      title: "Wholistic",
+      // description:
+      //   "An EdTech platform helping young people access quality education.",
+      image: project2Img,
+      demo: "https://wholisticeduconsult.com/",
+      // github: "https://github.com/Paulcode2",
+    },
+  ];
 
-            <div className="container portfolio__container">
-                <article className="portfolio__item">
-                <h3> User Auth</h3>
-                        <a href="https://github.com/Paulcode2/User-Authentication" rel="noreferrer" className='btn' target="_blank">Github</a>
-                        <a href="https://userp-auth.vercel.app/" rel="noreferrer"  className='btn btn-primary select'  target="_blank">Live Demo</a>
-                    <div className="portfolio__item-image">
-                        
-                    </div>
-                </article>
-            <article className="portfolio__item">
-            <h3>Kings Chat</h3>
-                        <a href="https://github.com/Paulcode2/User-Authentication" rel="noreferrer" className='btn' target="_blank">Github</a>
-                        <a href="https://kings-chat.vercel.app/login" rel="noreferrer"  className='btn btn-primary'  target="_blank">Live Demo</a>
-                <div className="portfolio__item-image">
-                        {/* <img src={Auth} alt="" /> */}
-                    </div>
-            </article>
-            <article className="portfolio__item">
-            <h3>Flash Blog</h3>
-                        <a href="https://github.com/Paulcode2/Blop-app" rel="noreferrer" className='btn' target="_blank">Github</a>
-                        <a href="https://flash-blog.vercel.app/" rel="noreferrer"  className='btn btn-primary'  target="_blank">Live Demo</a>
-                <div className="portfolio__item-image">
-                        {/* <img src={Auth} alt="" /> */}
-                    </div>
-            </article>
-            <article className="portfolio__item">
-            <h3> Weather App</h3>
-                        <a href="https://github.com/Paulcode2/Weather-app" rel="noreferrer" className='btn' target="_blank">Github</a>
-                        <a href="https://weather-appnaija.netlify.app/" rel="noreferrer"  className='btn btn-primary'  target="_blank">Live Demo</a>
-                <div className="portfolio__item-image">
-                        {/* <img src={Auth} alt="" /> */}
-                    </div>
-            </article>
-            </div>
-            <div className="span">
-            <span>Check More Here</span>
-            <a href="https://github.com/Paulcode2" rel="noreferrer" target='_blank'>Github</a>
-            </div>
-        </section>
-    )
-}
+  return (
+    <section id="portfolio">
+      <h5>My Works</h5>
+      <h2>Portfolio</h2>
 
-export default Port
+      <div className="container portfolio__container">
+        {projects.map((project, index) => (
+          <article key={index} className="portfolio__item">
+            <div className="portfolio__item-image">
+              <img src={project.image} alt={project.title} />
+              <div className="portfolio__item-overlay">
+                <a
+                  href={project.demo}
+                  rel="noreferrer"
+                  target="_blank"
+                  className="btn"
+                >
+                  <FaExternalLinkAlt /> Live Demo
+                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    rel="noreferrer"
+                    target="_blank"
+                    className="btn btn-primary"
+                  >
+                    <FaGithub /> Code
+                  </a>
+                )}
+              </div>
+            </div>
+            <div className="portfolio__item-content">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="portfolio__more">
+        <a
+          href="https://github.com/Paulcode2"
+          rel="noreferrer"
+          target="_blank"
+          className="btn"
+        >
+          View More on GitHub
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default Port;

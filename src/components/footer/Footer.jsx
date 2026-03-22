@@ -1,38 +1,106 @@
-import React from 'react'
-import './footer.css'
-import {AiFillFacebook} from 'react-icons/ai'
-import {AiFillTwitterCircle} from 'react-icons/ai'
-import {AiFillInstagram} from 'react-icons/ai'
-import {AiFillLinkedin} from 'react-icons/ai'
-import {AiFillGithub} from 'react-icons/ai'
-
+import React from "react";
+import "./footer.css";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Footer = () => {
-    return(
-        <footer id='footer'>
-            <a href="#" className='footer__logo'>Paul Levites</a>
+  const currentYear = new Date().getFullYear();
 
-            <ul className="permalinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">My Experience</a></li>
-                {/* <li><a href="#services"></a></li> */}
-                <li><a href="#contact">Contact</a></li>
+  const socialLinks = [
+    {
+      icon: <FaFacebook />,
+      link: "https://facebook.com/paul.Levite.73/",
+      label: "Facebook",
+    },
+    {
+      icon: <FaTwitter />,
+      link: "https://X.com/curlyhair_dev",
+      label: "Twitter",
+    },
+    {
+      icon: <FaInstagram />,
+      link: "https://instagram.com/curlyhair_dev",
+      label: "Instagram",
+    },
+    {
+      icon: <FaLinkedin />,
+      link: "https://linkedin.com/in/paul-levites",
+      label: "LinkedIn",
+    },
+    {
+      icon: <FaGithub />,
+      link: "https://github.com/paulcode2",
+      label: "GitHub",
+    },
+  ];
+
+  const quickLinks = [
+    { label: "Home", link: "#home" },
+    { label: "About", link: "#about" },
+    { label: "Experience", link: "#experience" },
+    { label: "Portfolio", link: "#portfolio" },
+    { label: "Contact", link: "#contact" },
+  ];
+
+  return (
+    <footer id="footer">
+      <div className="footer__bg">
+        <div className="footer__wave"></div>
+      </div>
+
+      <div className="container footer__container">
+        <div className="footer__content">
+          <div className="footer__brand">
+            <h3>Paul Levites</h3>
+            <p>
+              A passionate Frontend Developer creating beautiful web
+              experiences.
+            </p>
+          </div>
+
+          <div className="footer__quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+              {quickLinks.map((item, index) => (
+                <li key={index}>
+                  <a href={item.link}>{item.label}</a>
+                </li>
+              ))}
             </ul>
+          </div>
 
-           <div className="footer__socials">
-            <a href="https://facebook.com/paul.Levite.73/" target='blank'><AiFillFacebook/></a>
-            <a href="https://X.com/curlyhair_dev" target='blank'><AiFillTwitterCircle/></a>
-            <a href="https://instagram.com/curlyhair_dev" target='blank'><AiFillInstagram/></a>
-            <a href="https://www.linkedin.com/in/paul-ifeoluwa-levites-4a1530262/" target='blank'><AiFillLinkedin/></a>
-            <a href="https://github.com/Paulcode2" target='blank'><AiFillGithub/></a>
-            </div> 
-
-            <div className="footer__copyright">
-                <small>&copy; Paul Levites. All rights reserved.</small>
+          <div className="footer__social">
+            <h4>Connect</h4>
+            <div className="social__links">
+              {socialLinks.map((social, index) => (
+                <a
+                  href={social.link}
+                  rel="noreferrer"
+                  target="_blank"
+                  aria-label={social.label}
+                  key={index}
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
-        </footer>
-    )
-}
+          </div>
+        </div>
 
-export default Footer
+        <div className="footer__bottom">
+          <p>&copy; {currentYear} Paul Levites. All rights reserved.</p>
+          {/* <p className="footer__credit">
+                        Built with <span className="heart">♥</span> using React
+                    </p> */}
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
